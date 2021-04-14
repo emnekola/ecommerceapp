@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "auth": {
+      "ecommerceapp21sd4c82c0e": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}
