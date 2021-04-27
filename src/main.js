@@ -60,7 +60,7 @@ const Main = () => {
           );
 
       await API.del(
-        'ecommerceapi21'
+        'ecommerceapi21s'
         , '/products'
         , {
             body: {
