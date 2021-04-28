@@ -31,9 +31,9 @@ const Main = () => {
       , []
     );
 
-  async function getProducts() {
+  const getProducts = async() => {
 
-    const data = await API.get('ecommerceapi', '/products');
+    const data = await API.get('ecommerceapi21s', '/products');
     console.log('data: ', data);
 
     if (didCancel) {

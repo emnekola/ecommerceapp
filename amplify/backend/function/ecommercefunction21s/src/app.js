@@ -31,7 +31,7 @@ AWS.CognitoIdentityServiceProvider({
    adding the category
 *  This will also be available in the file itself, commented out at the top
 */
-var userpoolId = process.env.<your_app_id>
+var userpoolId = process.env.AUTH_ECOMMERCEAPP21SD4C82C0E_USERPOOLID
 
 // DynamoDB configuration
 const region = process.env.REGION
@@ -89,16 +89,21 @@ async function canPerformAction(event, group) {
  * Example get method *
  **********************/
 
- app.get('/products', async function(req, res) {
-   try {
-     const data = await getItems()
-     res.json({ data: data })
-   } catch (err) {
-     res.json({ error: err })
-   }
- })
+ app.get(
+   '/products'
+   , async function(req, res) {
+       try {
+         const data = await getItems();
+         res.json(
+           { data: data }
+         );
 
- async function getItems(){
+     } catch (err) {
+       res.json({ error: err });
+     }
+   })
+
+ async function getItems() {
    var params = { TableName: ddb_table_name }
    try {
      const data = await docClient.scan(params).promise()
